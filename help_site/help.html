@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="help.css">
+    </head>
+    <body>
+        <main>
+            <h1 class="main-title">ブックマーク.outの使い方</h1>
+            <div class="main-syn">
+                <div class="title-exp">
+                    <h3>
+                        <span id="site-explanation-beginning">ブックマーク.outは！</span><br>
+                        ダウンロードして自分なりにアレンジする！<br>
+                        サイトのステーション!!
+                    </h3>
+                </div>
+                <div class="exp-syn">
+                    <div class="howToUse">
+                        <h2>使い方</h2>
+                        <div class="one-of-how-to-use">
+                            <script>
+                                let useWhenMake = [
+                                    [
+                                        {word: 'このサイトに飛ぶ！→',link: "https://github.com/manmoth-24/" ,
+                                        img: '1.png'},
+                                        {word: 'そしたらいくつか作品のある中で、「bookmark-out-ver2.0」という作品をクリックします',
+                                        img: '2.png'},
+                                        {word: '緑色のCode▼を押す',
+                                        img: '3.png'},
+                                        {word: 'Download ZIPを押しこのファイルのジップファイルをダウンロードする',
+                                        img: '4.png'}
+                                    ],
+                                    [
+                                        {word: 'ダウンロードしたジップファイルを展開する macはダブルクリック、windowsは右クリックからすべて展開',
+                                        img: '5.png'},
+                                        {word: '展開したジップファイルの中身の中のindex.htmlを開いてみる',
+                                        img: '6.png'},
+                                        {word: '一回index.htmlの中身を見てみる',
+                                        img: '7.png'}
+                                    ],
+                                    [
+                                        {word: 'まず中央には、リンクがあります。ここに入るものを変える方法はもっと下にあります。',
+                                        img: '10.png'},
+                                        {word: '左上のヘッダーにはタイトルと？マークがあります。ご存じの通り？を押すと説明書があります',
+                                        img: '11.png'},
+                                        {word: '右上には検索欄があり、ここに入れたワードを入れて、Enterキーを押す・検索ボタンを押すで検索することができます。しかし、検索してヒットするリンクなどは自分で設定する必要があります',
+                                        img: '12.png'},
+                                        {word: '一番下にある更に見るを押すと、あまり使わないリンクを見ることができます。（設定する必要があります）',
+                                        img: '13.png'}
+                                    ],
+                                    [
+                                        {word: 'はじめにindex.htmlの中を改良する方法。まずブックマーク.out.jsをダブルクリックで開きます。',
+                                        img: '8.png'},
+                                        {word: 'メモ帳など改良するアプリが出てくると思います。大体このような文が出てくれば正解です。少し難しそうに見えますがくじけずにがんばりましょう。',
+                                        img: '9.png'},
+                                        {word: '<ul><li>let important_Linksの後の[]の中に色々ありますが、<br>'+
+                                                'ここに{}を入れるとリンクのブロックを追加できます。その中にさらにname: "", link: "" があると思います。<br>'+
+                                                '{}同士は,（カンマ）で区切り、name: ""の""(ダブルクォーテーション)には表示するときの名前を入れます<br>'+
+                                                'link: ""の""の中にはサイトのリンク（URL)を入れます。<br>'+
+                                                'これで新たにリンクが追加されました。</li>'+
+                                                '<li>次にlinksWithKeyの後の[]の中にも色々あると思います。<br>'+
+                                                'これは検索したときに出てくるサイトです。'+
+                                                'name: ""とlink: ""に入れるのはさっきと同じですが、<br>'+
+                                                'key: []の中には、ヒットさせる検索ワードを入れます。'+
+                                                'この中には""(ダブルクォーテーション)で挟んだ文字列（検索ワード）を'+
+                                                '入れます。このダブルクォーテーション同士は{}同士のように,（カンマ）で区切ります。<br></ul>',
+                                        img: '14.png'},
+                                        {word: '更に見るの変更も行います。subフォルダ内のsub_main.jsを開きます。',
+                                        img: '15.png'},
+                                        {word: 'このファイル内の変更はさっきやったimportant_Linksの変更と同じです。',
+                                        img: '16.png'}
+                                    ],
+                                    []
+                                ]
+                            
+                                let useTitle = [
+                                    'ブックマーク.outをダウンロードする。',
+                                    'ブックマーク.outを開く',
+                                    'ブックマーク.outのおおまかな使い方',
+                                    'ブックマーク.outを自分なりにアレンジする。',
+                                    'ブックマーク.outを観賞用に使う人へ'
+                                ]
+
+                                const makeList = () =>{
+                                    let selectTitleCount = 0;
+                                    useWhenMake.forEach((biggerBlock) =>{
+                                        let count = 0;
+                                        document.writeln(`<h3>${useTitle[selectTitleCount]}</h3><ol>`)
+                                        biggerBlock.forEach((block) =>{
+                                            if (block.link != null){
+                                                document.writeln(`<li>${block.word}<a href="${block.link}">${block.link}</a></li>`)
+                                                document.writeln(`<p><img src="../Images/how_to_use_imgs/${block.img}" class="how-to-img"><span class="img-des">←No.${count + 1}</span></p>`)
+                                                count ++;
+                                            }else{
+                                                document.writeln(`<li>${block.word}</li>`)
+                                                document.writeln(`<p><img src="../Images/how_to_use_imgs/${block.img}" class="how-to-img"><span class="img-des">←No.${count + 1}</span></p>`)
+                                                count ++;
+                                            }
+
+                                            if (block.doing != null){
+                                                block.doing
+                                            }
+                                            })
+                                        selectTitleCount ++;
+                                        document.writeln('</ol>')
+                                    })
+                                }
+
+                                makeList();
+                            </script>
+                            <p class="viewing-line">
+                                ブックマーク.outは元から観賞用ではありません。<br>
+                                そのため、あまりこういう場合は想定していません。<br>
+                                技術的な面で鑑賞しに来た人へ検索欄での説明をします。<br>
+                                実は検索欄ではallを使うと検索用のすべてのリンクが表示されます。<br>
+                                そして検索では二アーサーチというものがあります。<br>
+                                これは検索したときのワードがKeyに含まれるかで表示されるかが決まります。<br>
+                                それも<span class="under-line">ご活用ください</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="back-main-site" href="../index.html">元のページに戻る</a>
+            <div class="right-menu">
+                <h1>メニュー</h1>
+                <p class="it-has-no">なにもないようだ</p>
+            </div>
+            <script src="help_animation.js"></script>
+        </main>
+    </body>
+</html>

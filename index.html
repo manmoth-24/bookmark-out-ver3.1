@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ブックマーク.out</title>
+        <link rel="stylesheet" href="ブックマーク.out.css">
+        <link rel="icon" href="./Images/aikon.png">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon">
+        <script src="Information_chenger.js"></script>
+    </head>
+    <body>
+        <header>
+            <h2 class="header-title">BookMark.out</h2>
+            <a href="./help_site/help.html" class="help-icon">?</a>
+            <div class="header-inputs">
+                <input type="submit" value="検索" class="password-button" onclick="InputKeyRunSerch()">
+                <input type="search" id="password-input-text" class="password-input" placeholder="検索ワード">
+            </div>
+        </header>
+        <main>
+            <h1>ブックマーク.out</h1>
+            <script src="ブックマーク.out.js"></script>
+
+        
+            <div class="inputs">
+                <p>
+                    <a href="./sub/sub_main.html">
+                        <input type="button" value="さらに表示" class="more-display-button">
+                    </a>
+                </p>
+            </div>
+            <div class="register-input">
+                <h3>新しいリンク設定</h3>
+
+                <div class="register-input-inputs">
+                    <h4>名前</h4>
+                    <input type="text" id="set-new-name" class="set-new-name input-text" placeholder="名前">
+                    <h4>リンク</h4>
+                    <input type="text" id="set-new-link" class="set-new-link input-text" placeholder="リンク">
+                    <h4>キー</h4>
+                    <textarea id="new-keys" class="set-keys input-text">,</textarea>
+    
+                    <div class="textarea-for-key">
+                        <input type="button" value="登録する" onclick="GetElementForSave()" class="register-button">
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="bulletin-boards">
+            <h2 class="bulletin-boards-header">掲示板</h2>
+            <p class="boards-left">他作品について！</p>
+            <p class="boards-left">自己紹介はこちらへ！</p>
+            <div class="written">
+                <p id="Information">Information</p>
+            </div>
+            <p class="boards-right">そのほかの情報はこちらへ！</p>
+        </div>
+    </body>
+</html>

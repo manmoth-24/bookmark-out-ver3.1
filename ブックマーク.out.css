@@ -1,0 +1,175 @@
+td{
+    padding: 10px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+table{
+    width: 90%;
+    background-color: #EEFFFF;
+}
+td{
+    color: #000033;
+}
+body{
+    background-color: #FFFF99;
+    margin: 0px;
+}
+
+header{
+    background-color: #303011;
+    border-bottom: 3px solid #e9e968;
+    height: 70px;
+    padding: 10px;
+}
+.imp-name{
+    font-size: 35px;
+    color: #660033;
+}
+.imp-link{
+    font-size: 25px;
+    color: #000066;
+}
+
+.more-display-button{
+    width: 100px;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #99f;
+    color: #000066;
+    border-radius: 3px;
+}
+
+.password-input{
+    width: 20%;
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    display: block;
+    float: right;
+    background-color: #858566;
+    margin-right: 40px;
+    transition: all 0.5s;
+}
+
+.password-input:hover{
+    background-color: white;
+}
+
+.password-input:focus{
+    background-color: white;
+}
+
+.password-button{
+    background-color: #9f9f52;
+    border: none;
+    border-radius: 3.5px;
+    height: 30px;
+    width: 50px;
+    display: block;
+    float: right;
+    transition: all 1s;
+}
+
+.password-button:hover{
+    background-color: #afaf74;
+}
+
+.inputs{
+    text-align: center;
+    margin: 0 auto;
+}
+
+.header-inputs{
+    text-align: right;
+    padding: 10px;
+}
+
+.header-title{
+    color: white;
+    float: left;
+}
+
+.help-icon{
+    position: relative;
+    top: 9px;
+    left: 7px;
+    color: #bbb;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.help-icon:hover{
+    text-decoration: underline;
+}
+
+.register-input{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    margin: 3%;
+    border-top: 3px double #660033;
+    border-bottom: 3px double #660033;
+    padding: 5px;
+    padding-bottom: 50px;
+}
+
+.register-input-inputs{
+    padding-left: 30px;
+}
+
+.register-input input{
+    width: 90%;
+}
+
+.register-input textarea{
+    width: 90%;
+    margin-bottom: 40px;
+}
+
+.textarea-for-key{
+    padding: 30px;
+    width: 90%;
+    border-top: 2px solid black;
+}
+
+.register-input-inputs .input-text{
+    margin-left: 20px;
+}
+
+.bulletin-boards{
+    position: fixed;
+    width: 100%;
+    height: 10%;
+    bottom: 0px;
+    background: #EEEE88;
+    padding: 10px;
+    opacity: 0.5;
+    transition: all 0.7s;
+}
+
+.bulletin-boards:hover{
+    opacity: 0.95;
+}
+
+.bulletin-boards h2{
+    margin-right: 30px;
+    float: left;
+}
+
+.boards-left{
+    float: left;
+    margin-left: 10px;
+}
+
+.boards-right{
+    float: right;
+    margin-right: 10px;
+}
+
+.written{
+    display: block;
+    float: right;
+    margin: 0px 20px;
+}

@@ -1,0 +1,99 @@
+body{
+    margin: none;
+}
+
+.main-title{
+    padding: 10px;
+}
+
+.right-menu{
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    background-color: #eeeeaa;
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+}
+
+.right-menu h1{
+    border-bottom: black solid 2px;
+}
+
+.title-exp{
+    border-left: green double 5px;
+    padding-left: 20px;
+}
+
+.main-syn{
+    margin: 5px 0px 0px 0px;
+    padding-left: 50px;
+}
+
+.exp-syn{
+    margin-top: 30px;
+    padding-left: 10px;
+    border-top: lightgreen solid 5px;
+    width: 70%;
+}
+
+.howToUse{
+    margin-left: 10px;
+}
+
+.one-of-how-to-use{
+    margin: 5px;
+}
+
+.how-to-img{
+    width: 50%;
+    border: gray solid 2px;
+}
+
+.img-des{
+    position: relative;
+    left: 10px;
+}
+
+.it-has-no{
+    color: #bbb;
+    text-align: center;
+}
+
+.viewing-line{
+    line-height: 30px;
+    margin-left: 15px;
+}
+
+.under-line{
+    text-decoration: underline;
+}
+
+.back-main-site{
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: right;
+    position: relative;
+    right: 20%;
+    padding: 20px;
+    margin: 10px;
+    color: blueviolet;
+    border-bottom: blue double 10px;
+    transition: all 1s;
+}
+
+.back-main-site:hover{
+    text-decoration: underline;
+    color: #c6f;
+    border-bottom: #55f double 10px;
+}
+
+#site-explanation-beginning{
+    font-size: 10px;
+    transition: 2.5s;
+}
+#site-explanation-beginning.active{
+    font-size: 30px;
+    color: red;
+}

@@ -1,0 +1,82 @@
+const ChengeTurnObject = (str, indexName, startIndex) =>{
+    indexNameCoordinate = str.indexOf(indexName) + indexName.length;
+    var quotationCount = 0
+    var colonCount = 0
+    var thisObjectStr = ""
+    for (var i = indexNameCoordinate;quotationCount <= 1;i++){
+        if (str[i] == '"'){
+            quotationCount++
+        }
+        else if(str[i] == ':'){
+            colonCount++
+        }
+        
+        if (colonCount > 0){
+            
+        }
+        thisObjectStr = thisObjectStr + str[i]
+    }
+    return thisObjectStr
+}
+
+
+if (localStorage.Blocks != null){
+    var strageBlocks = localStorage.getItem("Blocks");
+    var forReturnStrageBlocks = ""
+    var pluralLength = false;
+    for(var i = 1;i < strageBlocks.length;i ++){
+        if (strageBlocks[i] == "|"){
+            pluralLength = true;
+        }
+        forReturnStrageBlocks = forReturnStrageBlocks + strageBlocks[i]
+    }
+    console.log(forReturnStrageBlocks)
+    if (pluralLength){
+        strageBlocks = forReturnStrageBlocks.split('|')
+        console.log("foreach↓")
+        strageBlocks.forEach((block) =>{
+            console.log(block)
+            linksWithKey.push(block)
+        })
+    }else{
+        var name = ChengeTurnObject(strageBlocks, "name")
+        var link = ChengeTurnObject(strageBlocks, "link")
+        var keys = 
+        strageBlocks
+        console.log("foreach↓")
+        console.log(strageBlocks)
+        linksWithKey.push(strageBlocks)
+    }
+    
+    
+}
+const SetNewLinkWithKey = ()=>{
+    var newLink = document.getElementById("set-new-link").value
+    var newName = document.getElementById("set-new-name").value
+
+    var newKeys = document.getElementById("new-keys").value
+    var keyAtArray = newKeys.split(',');
+    console.log(keyAtArray)
+
+    var registeredBlocks = localStorage.Blocks
+    var registeredBlocksAtArray;
+
+    if (registeredBlocks != undefined){
+        linksWithKey.push({name: newName,link: newLink, key: keyAtArray})
+        registeredBlocksAtArray += `|{name: "${newName}",link: "${newLink}", key: [${keyAtArray}]}`
+        
+    }else{
+        linksWithKey.push({name: newName,link: newLink, key: keyAtArray})
+        registeredBlocksAtArray = `|{name: "${newName}",link: "${newLink}", key: [${keyAtArray}]}`
+    }
+    if (localStorage.Blocks == undefined){
+        localStorage.setItem("Blocks", registeredBlocksAtArray)
+    }else{
+        localStorage.Blocks = registeredBlocksAtArray
+    }
+
+    console.log("↓foreach↓")
+    localStorage.getItem("Blocks").split('|').forEach((block)=>{
+        console.log(block)
+    })
+}
